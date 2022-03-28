@@ -1,0 +1,17 @@
+pwd    => present working directory
+code . => vs code open
+cls    => clear terminal
+ls     => have any something
+
+VS Code install: 
+es7 react ->ES7 React/Redux/GraphQL/React-Native snippets
+
+React Command:
+npx create-react-app my-app
+cd my-app
+npm start => start on browser
+
+
+To create a random UUID...=>
+npm install uuid
+uuidv4()
