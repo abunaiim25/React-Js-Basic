@@ -1,0 +1,40 @@
+form{
+    width: 50%;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+.form_field{
+    margin: 1rem 0;
+    display: flex;
+}
+.form_field label{
+    flex-basis: 20%;
+}
+.form_field input{
+    flex-basis: 80%;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+}
+.form_field textarea{
+    flex-basis: 80%;
+    border: none;
+    resize: none;
+    border-radius: 0.6rem;
+    padding: 0.5rem;
+}
+form button{
+border: none;
+border-radius: 00.6rem;
+cursor: pointer;
+display: block;
+margin: 0 auto;
+width: 50%;
+}
+form button:hover{
+    background-color: orange;
+    color: white;
+}
