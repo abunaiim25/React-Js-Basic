@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-
+/*============*/
 
 nav{
   height: 8vh;
@@ -45,7 +45,6 @@ nav{
   justify-content: center;
   align-items: center;
 }
-
 .nav-link{
   color: black !important;
   text-decoration: none;
@@ -55,4 +54,24 @@ nav{
 }
 nav .active{
   color: white!important;
+}
+
+section{
+  display: grid;
+  grid-gap: 1rem;
+}
+article{
+  background-color:aqua;
+  padding: 1rem;
+}
+
+@media screen and (min-width:600px){
+  section{
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (min-width:992px){
+  section{
+    grid-template-columns: auto auto auto;
+  }
 }

@@ -1,17 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
+import { blogsData } from '../data';
 
 const Blog = () => {
 
+    const [blogs, setBlogs] = useState(blogsData);
     const navigate = useNavigate();
-    
+
+    //Learn more
+    const truncateString = (str, num) =>
+    {
+        if(str.length > num)
+        {
+            return str.slice(0, num) + "...";
+        }
+        else{
+            return str;
+        }
+    }
+
     return (
+
         <div className='m-3'>
             <h1>Blog Page</h1>
 
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt totam praesentium officia fuga eaque at temporibus blanditiis suscipit mollitia magni delectus harum quos autem exercitationem ratione, ea quaerat modi distinctio alias, veritatis, quam doloribus ad animi. Minima placeat animi autem assumenda aperiam sunt quod excepturi ipsa soluta, commodi quia ducimus!</p>
+            <section>
+                {
+                    blogs.map((blog) => {
+                        const { id, title, body } = blog; //distructring
+                       return <article key={id}>
+                            <h3>{title}</h3>
+                            <p>{truncateString(body, 100)}</p>
 
-            <button onClick={()=>navigate("/")}>Go to Home Page</button>
+                         <Link to={title} state={{ id, title, body }}>Learn More</Link>
+                        </article>
+                    })
+                }
+            </section>
+
+            <button onClick={() => navigate("/")}>Go to Home Page</button>
         </div>
     )
 }
