@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Card from './Card';
 import "./Portfolio.css";
-import Portfolio_data from "./Portfolio_data"
+import Portfolio_data from "./Portfolio_data";
 
 const Portfolio = () => {
 

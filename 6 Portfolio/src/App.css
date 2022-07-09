@@ -69,6 +69,7 @@ button {
   transform: translateY(-10px);
 }
 
+/*====================box====================*/
 .box_shodow {
   background: linear-gradient(145deg, #e2e8ec, #ffffff);
   box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
@@ -110,4 +111,33 @@ h1{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 35px;
+}
+
+/*---------------textarea input----------------*/
+textarea,
+input{
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 3px solid #e2e8ec;
+  margin-bottom: 20px;
+}
+
+/*----------Footer---------*/
+footer {
+  margin: 20% 0 10% 0;
+}
+footer p {
+  margin-top: 30px;
+}
+/*----------Footer---------*/
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
 }

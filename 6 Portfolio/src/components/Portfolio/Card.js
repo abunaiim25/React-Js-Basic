@@ -43,7 +43,7 @@ const Card = (props) => {
           <div className='modal-content d_flex'>
 
             <div className='modal-img left'>
-              <img style={{ width: "100%", height: "100%" }} src={props.image} alt='' />
+              <img style={{ width: "100%" }} src={props.image} alt='' />
             </div>
 
             <div className='modal-text right'>
